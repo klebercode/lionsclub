@@ -8,11 +8,17 @@ from eventi.receipts.models import Receipt
 
 
 class ReceiptAdmin(admin.ModelAdmin):
-    list_display = ('name', 'subscription', 'created_at',
+    list_display = ('name', 'subscription', 'created_at', 'get_attach',
                     'subscribed_today',)
     date_hierarchy = 'created_at'
     search_fields = ('name', 'subscription', 'created_at')
     list_filter = ['created_at']
+
+    def get_attach(self, obj):
+        return '<a href="%s" target="_Blank">Baixar</a><br>' % obj.attach.url
+
+    get_attach.short_description = _(u'Comprovante')
+    get_attach.allow_tags = True
 
     def subscribed_today(self, obj):
         try:
