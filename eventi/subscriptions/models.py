@@ -18,20 +18,24 @@ class Subscription(models.Model):
     usage = models.IntegerField(_(u'Tratamento'), choices=USAGE_CHOICES,
                                 default=1)
     name = models.CharField(_(u'Nome'), max_length=100)
-    cpf = models.CharField(_(u'CPF'), max_length=11, unique=True)
-    birth = models.DateField(_(u'Data de Nascimento'),
+    cpf = models.CharField(_(u'CPF'), max_length=11, unique=True,
+                           blank=True, null=True)
+    birth = models.DateField(_(u'Data de Nascimento'), blank=True, null=True,
                              help_text=_(u'Para Premiação'))
-    leo = models.DateField(_(u'Data de Ingresso no Leonísmo'),
-                           help_text=_(u'Para Premiação'))
-    job_club = models.CharField(_(u'Cargo no Clube'), max_length=100)
-    job_dist = models.CharField(_(u'Cargo no Distrito'), max_length=100)
+    leo = models.DateField(_(u'Data de Ingresso no Leonísmo'), blank=True,
+                           null=True, help_text=_(u'Para Premiação'))
+    job_club = models.CharField(_(u'Cargo no Clube'), max_length=100,
+                                blank=True, null=True,)
+    job_dist = models.CharField(_(u'Cargo no Distrito'), max_length=100,
+                                blank=True, null=True,)
     job_mult = models.CharField(_(u'Cargo no Distrito Múltiplo'),
-                                max_length=100)
+                                max_length=100, blank=True, null=True,)
     phone = models.CharField(_(u'Telefone'), max_length=20)
     email = models.EmailField(_(u'Email'))
     hotel = models.CharField(_(u'Hotel de Hospedagem'), max_length=100,
                              blank=True, null=True)
-    extra = models.TextField(_(u'Local e Data'), blank=True, null=True)
+    extra = models.CharField(_(u'Cidade, Data'), max_length=150,
+                             blank=True, null=True)
     created_at = models.DateField(_(u'Criado em'), auto_now_add=True)
     paid = models.BooleanField(_(u'Pago'), default=False)
 
