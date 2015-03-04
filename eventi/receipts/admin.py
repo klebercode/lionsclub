@@ -15,10 +15,15 @@ class ReceiptAdmin(admin.ModelAdmin):
     list_filter = ['created_at']
 
     def subscribed_today(self, obj):
-        print "%s = %s = %s" % (obj.created_at,
-                                datetime.today().date(),
-                                timezone.now().date())
-        return obj.created_at == datetime.today().date()
+        try:
+            created = obj.created_at.date()
+        except:
+            created = obj.created_at
+
+        print "%s = %s = %s" % (created,
+                                datetime.today(),
+                                timezone.now())
+        return created == datetime.today().date()
 
     subscribed_today.short_description = _(u'Enviado hoje?')
     subscribed_today.boolean = True

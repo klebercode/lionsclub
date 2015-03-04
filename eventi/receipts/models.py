@@ -8,7 +8,7 @@ class Receipt(models.Model):
     subscription = models.IntegerField(_(u'Número de Inscrição'))
     attach = models.FileField(_(u'Selecione um arquivo'),
                               upload_to='documents/%Y/%m/%d')
-    created_at = models.DateField(_(u'Criado em'), auto_now_add=True)
+    created_at = models.DateTimeField(_(u'Criado em'), auto_now_add=True)
 
     def __unicode__(self):
         return unicode(self.name)

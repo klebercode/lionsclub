@@ -56,20 +56,16 @@
           <ul class="nav navbar-nav pull-right">
             <li class="{% block nav_home %}{% endblock %}"><a href="{% url 'home' %}">Início</a></li>
             <li class="{% block nav_subscription %}{% endblock %}"><a href="{% url 'subscriptions:subscribe' %}">Inscrição</a></li>
-            <li class="{% block nav_receipt %}{% endblock %}"><a href="{% url 'receipts:receipt' %}">Comprovante</a></li>
+            <li class="{% block nav_receipt %}{% endblock %}"><a href="{% url 'receipts:receipt' %}">Comprovante de Pagamento</a></li>
             <!-- <li><a href="#">Contato</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <div class="container">
+    {% block content %}
 
-      {% block content %}
-
-      {% endblock content %}
-
-    </div><!-- /.container -->
+    {% endblock content %}
 
     <footer class="footer">
       <div class="container">

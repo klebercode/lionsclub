@@ -4,12 +4,50 @@
 
 {% block content %}
 
-      <div class="starter-template">
-        <h1>XVI Convenção do Distrito LA-3, AL 2014/2015</h1>
-        <p class="lead">A Associação Internacional de Lions Clubes convida você a fazer parte da nossa convenção em Garanhuns-PE, nos dias 24 a 26 de abril de 2015.</p>
-        <p class="lead">
-          <a href="{% url 'subscriptions:subscribe' %}" class="btn btn-lg btn-success">Fazer Inscrição</a>
-        </p>
-      </div>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="starter-template">
+                <h1>XVI Convenção do Distrito LA-3, AL 2014/2015</h1>
+                <p class="lead">A Associação Internacional de Lions Clubes convida você a fazer parte da nossa convenção em Garanhuns-PE, nos dias 24 a 26 de abril de 2015.</p>
+                <p class="lead">
+                    <a href="{% url 'subscriptions:subscribe' %}" class="btn btn-lg btn-success">Fazer Inscrição</a>
+                </p>
+            </div>
+        </div><!-- /.container -->
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>INSCRIÇÃO POR PESSOA:</strong><br>
+                + R$ 120,00 até 20/03/2015<br>
+                + R$ 130,00 de 21/03/2015 até 20/04/2015<br>
+                + R$ 150,00 a partir de 21/04/2015</p><br>
+
+                <p>Para concluir sua inscrição você deve realizar o depósito na conta:<br>
+                Banco: <strong>Caixa Econômica Federal</strong><br>
+                Agência: <strong>0052</strong><br>
+                Conta Poupança: <strong>100.283-5</strong><br>
+                Operação: <strong>013</strong><br>
+                Titular: <strong>Lions Clube de Garanhuns</strong></p><br>
+
+                <p>Para enviar o seu <strong>comprovante de pagamento</strong> acesse:<br>
+                <a href="http://lions.ow7.com.br/comprovante/">
+                    http://lions.ow7.com.br/comprovante/
+                </a></p><br>
+            </div>
+            <div class="col-md-6">
+                <p><strong>IMPORTANTE:</strong><br>
+                1 - As datas solicitadas devem ser informadas para possibilitar as premiações.<br>
+                2 - Serão consideradas como primeira inscrição individual e coletiva o primeiro crédito recebido.<br>
+                3 - Os pagamentos deverão ser efetuados através de depósito bancário.<br>
+                4 - Os depósitos de pagamento deverão ser identificados com o número da inscrição ou nome.</p><br>
+
+                <p><strong>CONTATOS:</strong><br>
+                CL Adjamiro Ribeiro Lopes - Tesoureiro do Evento: (87) 9926.8990 (TIM) / lionsgus@outlook.com<br>
+                Gleydson Vasconcelos: (87) 9621.9176 (TIM) / gleydsonn@hotmail.com</p><br>
+            </div>
+        </div>
+    </div><!-- /.container -->
 
 {% endblock content %}

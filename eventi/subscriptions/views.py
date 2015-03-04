@@ -25,8 +25,8 @@ def create(request):
         return render(request, 'subscriptions/subscription_form.html',
                       {'form': form})
 
-    obj = form.send_mail()
     obj = form.save()
+    form.send_mail(obj.pk)
     return HttpResponseRedirect('/inscricao/%d/' % obj.pk)
 
 

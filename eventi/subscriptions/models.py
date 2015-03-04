@@ -35,9 +35,8 @@ class Subscription(models.Model):
     hotel = models.CharField(_(u'Hotel de Hospedagem'), max_length=100,
                              blank=True, null=True)
     extra = models.CharField(_(u'Local e Data'), max_length=150,
-                             blank=True, null=True,
-                             help_text='Cidade, Data')
-    created_at = models.DateField(_(u'Criado em'), auto_now_add=True)
+                             blank=True, null=True)
+    created_at = models.DateTimeField(_(u'Criado em'), auto_now_add=True)
     paid = models.BooleanField(_(u'Pago'), default=False)
 
     def __unicode__(self):

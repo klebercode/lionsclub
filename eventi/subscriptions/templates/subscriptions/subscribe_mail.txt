@@ -1,4 +1,5 @@
 Parabéns {{ name }}, sua inscrição foi realizada com sucesso.
+Guarde seu número de inscrição: {{ subscription }}.
 
 INSCRIÇÃO POR PESSOA:
 + R$ 120,00 até 20/03/2015
@@ -8,13 +9,17 @@ INSCRIÇÃO POR PESSOA:
 DADOS PARA DEPÓSITO:
 Banco: Caixa Econômica Federal
 Agência: 0052
-Conta Poupança: 65.873-1
-Variação: 51
+Conta Poupança: 100.283-5
+Operação: 013
+Titular: Lions Clube de Garanhuns
+
+Para enviar o seu comprovante de pagamento acesse:
+http://lions.ow7.com.br/comprovante/
 
 IMPORTANTE:
 1 - As datas solicitadas devem ser informadas para possibilitar as premiações.
 2 - Serão consideradas como primeira inscrição individual e coletiva o primeiro crédito recebido.
-3 - Os pagamentos deverão ser efetuados através do boleto bancário ou depósito.
+3 - Os pagamentos deverão ser efetuados através de depósito bancário.
 4 - Os depósitos de pagamento deverão ser identificados com o número da inscrição ou nome.
 
 CONTATOS:

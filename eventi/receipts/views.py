@@ -24,8 +24,8 @@ def create(request):
     if not form.is_valid():
         return render(request, 'receipts/receipt_form.html',
                       {'form': form})
-    form.send_mail()
     obj = form.save()
+    form.send_mail(obj.pk)
     return HttpResponseRedirect('/comprovante/%d/' % obj.pk)
 
 

@@ -49,6 +49,8 @@ class PhoneField(forms.MultiValueField):
 
 class SubscriptionForm(forms.ModelForm):
     # phone = PhoneField(label=_('Telefone'), required=False)
+    extra = forms.CharField(label=_(u'Local e Data'), widget=forms.TextInput(
+                            attrs={'placeholder': 'Cidade, Data'}))
 
     class Meta:
         model = Subscription
@@ -74,12 +76,13 @@ class SubscriptionForm(forms.ModelForm):
 
         return self.cleaned_data
 
-    def send_mail(self):
+    def send_mail(self, pk):
         subject = u'Lions Clubes, inscrição realizada.'
         context = {
             'name': self.cleaned_data['name'],
             'phone': self.cleaned_data['phone'],
             'email': self.cleaned_data['email'],
+            'subscription': pk,
         }
 
         email_to = self.cleaned_data['email']
@@ -87,7 +90,7 @@ class SubscriptionForm(forms.ModelForm):
         message_html = render_to_string('subscriptions/subscribe_mail.html',
                                         context)
         msg = EmailMultiAlternatives(subject, message,
-                                     'no-reply@lionsclubegaranhuns.org.br',
+                                     'convencao@lionsclubegaranhuns.org.br',
                                      [email_to])
 
         msg.attach_alternative(message_html, 'text/html')

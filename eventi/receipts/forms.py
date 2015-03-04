@@ -11,7 +11,7 @@ class ReceiptForm(forms.ModelForm):
     class Meta:
         model = Receipt
 
-    def send_mail(self):
+    def send_mail(self, pk):
         subject = u'Lions Clubes, comprovante enviado.'
         context = {
             'name': self.cleaned_data['name'],
@@ -28,7 +28,7 @@ class ReceiptForm(forms.ModelForm):
         message_html = render_to_string('receipts/receipt_mail.html',
                                         context)
         msg = EmailMultiAlternatives(subject, message,
-                                     'no-reply@lionsclubegaranhuns.org.br',
+                                     'convencao@lionsclubegaranhuns.org.br',
                                      [email_to])
 
         msg.attach_alternative(message_html, 'text/html')

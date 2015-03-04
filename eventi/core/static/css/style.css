@@ -1,9 +1,19 @@
 body > .container {
-  padding: 80px 15px 0;
+  padding: 0 15px;
 }
 .starter-template {
-  padding: 40px 15px;
+  padding: 30px 15px 0;
   text-align: center;
+}
+.starter-template h1 {
+  font-size: 45px;
+  font-weight: bold;
+}
+.message {
+  padding: 90px 0 30px;
+}
+.forms {
+  padding: 60px 0 30px;
 }
 .container .text-muted {
   margin: 20px 0;
