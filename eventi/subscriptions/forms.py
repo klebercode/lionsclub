@@ -49,7 +49,8 @@ class PhoneField(forms.MultiValueField):
 
 class SubscriptionForm(forms.ModelForm):
     # phone = PhoneField(label=_('Telefone'), required=False)
-    extra = forms.CharField(label=_(u'Local e Data'), widget=forms.TextInput(
+    extra = forms.CharField(label=_(u'Local e Data'), required=False,
+                            widget=forms.TextInput(
                             attrs={'placeholder': 'Cidade, Data'}))
 
     class Meta:
