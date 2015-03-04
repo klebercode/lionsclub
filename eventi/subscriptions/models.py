@@ -34,8 +34,9 @@ class Subscription(models.Model):
     email = models.EmailField(_(u'Email'))
     hotel = models.CharField(_(u'Hotel de Hospedagem'), max_length=100,
                              blank=True, null=True)
-    extra = models.CharField(_(u'Cidade, Data'), max_length=150,
-                             blank=True, null=True)
+    extra = models.CharField(_(u'Local e Data'), max_length=150,
+                             blank=True, null=True,
+                             help_text='Cidade, Data')
     created_at = models.DateField(_(u'Criado em'), auto_now_add=True)
     paid = models.BooleanField(_(u'Pago'), default=False)
 
