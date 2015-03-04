@@ -1,0 +1,6 @@
+Obrigado {{ name }}, seu comprovante foi enviado com sucesso.
+Guarde seu número de inscrição: {{ subscription }}.
+
+CONTATOS:
+CL Adjamiro Ribeiro Lopes - Tesoureiro do Evento: (87) 9926.8990 (TIM) / lionsgus@outlook.com
+Gleydson Vasconcelos: (87) 9621.9176 (TIM) / gleydsonn@hotmail.com

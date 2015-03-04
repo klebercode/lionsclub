@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block nav_home %}active{% endblock nav_home %}
+
+{% block content %}
+
+      <div class="starter-template">
+        <h1>XVI Convenção do Distrito LA-3, AL 2014/2015</h1>
+        <p class="lead">A Associação Internacional de Lions Clubes convida você a fazer parte da nossa convenção em Garanhuns-PE, nos dias 24 e 26 de abril de 2015.</p>
+        <p class="lead">
+          <a href="{% url 'subscriptions:subscribe' %}" class="btn btn-lg btn-success">Fazer Inscrição</a>
+        </p>
+      </div>
+
+{% endblock content %}

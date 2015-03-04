@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load bootstrap3 %}
+
+{% block nav_receipt %}active{% endblock nav_receipt %}
+
+{% block content %}
+
+    <form action="." method="POST" enctype="multipart/form-data">
+        {%  csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
+        {% buttons %}
+            <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </div>
+        {% endbuttons %}
+    </form>
+
+{% endblock content %}

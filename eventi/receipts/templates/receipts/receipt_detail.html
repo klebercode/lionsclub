@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block nav_receipt %}active{% endblock nav_receipt %}
+
+{% block content %}
+
+    <p>Obrigado {{ receipt.name }}, seu comprovante foi enviado em
+        <strong>{{ receipt.created_at|date:"d/m/Y" }}</strong>.<br>
+        Guarde seu número de inscrição: <strong>{{ receipt.subscription }}</strong>.
+    </p><br>
+
+    <p><strong>CONTATOS:</strong><br>
+    CL Adjamiro Ribeiro Lopes - Tesoureiro do Evento: (87) 9926.8990 (TIM) / lionsgus@outlook.com<br>
+    Gleydson Vasconcelos: (87) 9621.9176 (TIM) / gleydsonn@hotmail.com</p><br>
+
+    <p>Em breve você receberá um email, confirmando a sua inscrição.</p>
+
+{% endblock content %}
