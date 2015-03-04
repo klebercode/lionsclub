@@ -7,14 +7,20 @@ from eventi.subscriptions.models import Subscription
 
 
 class SubscriptionAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'cpf', 'phone', 'created_at',
+    list_display = ('id', 'name', 'email', 'phone', 'created_at',
                     'subscribed_today', 'paid')
+    list_display_links = ('id', 'name')
     date_hierarchy = 'created_at'
-    search_fields = ('name', 'email', 'cpf', 'phone', 'created_at')
+    search_fields = ('name', 'email', 'phone', 'created_at')
     list_filter = ['created_at']
 
     def subscribed_today(self, obj):
-        return obj.created_at.date() == datetime.today().date()
+        try:
+            created = obj.created_at.date()
+        except:
+            created = obj.created_at
+
+        return created == datetime.today().date()
 
     subscribed_today.short_description = _(u'Inscrito hoje?')
     subscribed_today.boolean = True

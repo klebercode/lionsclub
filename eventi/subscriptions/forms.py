@@ -54,12 +54,12 @@ class SubscriptionForm(forms.ModelForm):
 
     class Meta:
         model = Subscription
-        exclude = ('paid',)
+        exclude = ('paid', 'cpf')
 
-    def __init__(self, *args, **kwargs):
-        super(SubscriptionForm, self).__init__(*args, **kwargs)
+    # def __init__(self, *args, **kwargs):
+    #     super(SubscriptionForm, self).__init__(*args, **kwargs)
 
-        self.fields['cpf'].validators.append(CPFValidator)
+    #     self.fields['cpf'].validators.append(CPFValidator)
 
     def clean_name(self):
         name = self.cleaned_data['name']
