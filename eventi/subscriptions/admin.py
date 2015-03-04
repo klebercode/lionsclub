@@ -12,7 +12,7 @@ class SubscriptionAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'name')
     date_hierarchy = 'created_at'
     search_fields = ('name', 'email', 'phone', 'created_at')
-    list_filter = ['created_at']
+    list_filter = ['created_at', 'paid']
 
     def subscribed_today(self, obj):
         try:
