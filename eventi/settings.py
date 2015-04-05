@@ -109,11 +109,11 @@ MEDIA_URL = '/media/'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'Lions Clube Garanhuns <convencao@lionsclubegaranhuns.org.br>'
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtpi.kinghost.net'
-EMAIL_HOST_USER = 'convencao@lionsclubegaranhuns.org.br'
-EMAIL_HOST_PASSWORD = 't8w4q7e3'
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 
 
